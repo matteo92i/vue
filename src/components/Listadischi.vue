@@ -10,14 +10,24 @@
 import axios from "axios";
 
 export default {
-    data
+    data (){
+        return{
+            liDischi: []
+
+        }
+
+    },
 
 
     mounted(){
     axios.get('https://flynn.boolean.careers/exercises/api/array/music')
-    .then(risposta)
-    console.log(risposta)
+    .then((musica)=>{
+        console.log(musica)
+    } )
+        
+    
     },
+    
 }
 </script>
 
