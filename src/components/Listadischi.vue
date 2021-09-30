@@ -1,7 +1,9 @@
 <template>
     <div>
         <div class="container">
-            <div class="box-container"></div>
+            <div v-for= "(element, index) in liDischi" :key="index" class="box-container">
+
+            </div>
         </div>
 
     </div>
@@ -22,7 +24,8 @@ export default {
     mounted(){
     axios.get('https://flynn.boolean.careers/exercises/api/array/music')
     .then((musica)=>{
-        console.log(musica)
+        this.liDischi = musica.data.response.slice(),
+        console.log(this.liDischi)
     } )
         
     
@@ -33,6 +36,11 @@ export default {
 
 
 <style>
+.box-container{
+    width: 40px;
+    height: 60px;
+    background-color: grey;
+}
 
 </style>
    
