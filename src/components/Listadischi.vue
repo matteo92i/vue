@@ -3,6 +3,9 @@
         <div class="container">
             <div v-for= "(element, index) in liDischi" :key="index" class="box-container">
                 <img class="dimensione" :src="element.poster" :alt="element.author">
+                <h4>{{element.title}}</h4>
+                <p>{{element.author}}</p>
+                <p>{{element.year}}</p>
 
             </div>
         </div>
